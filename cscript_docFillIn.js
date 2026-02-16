@@ -1,0 +1,25 @@
+const footer=document.querySelector('footer');
+const nav=document.querySelector('.nav');
+const menu=document.querySelector('.menu');
+
+footer.innerHTML=`<p>本网站由<a href='https://dash.cloudflare.com/' target='_blank'>cloudflare</a>部署</p>
+<p>Developed by TSY 2026</p>`;
+
+function gethref(Nav1,Nav2,Nav3,Nav4){
+    const content1='首页',content2='英语提升',content3='关于',content4='Learn From BBC';
+    nav.innerHTML=`
+    <a href='${Nav1}' target='_blank' class='_1'>${content1}</a>
+    <a href='${Nav2}' target='_blank' class='_2'>${content2}</a>
+    <a href='${Nav3}' target='_blank' class='_3'>${content3}</a>
+    <a href='${Nav4}' target='_blank' class='_4' style='color:rgb(0, 76, 211)'>${content4}</a>
+    `;
+    menu.innerHTML=`
+    <a href='${Nav1}' target='_blank' class='_1'>${content1}</a>
+    <a href='${Nav2}' target='_blank' class='_2'>${content2}</a>
+    <a href='${Nav3}' target='_blank' class='_3'>${content3}</a>
+    <a href='${Nav4}' target='_blank' class='_4' style='color:rgb(0, 76, 211)'>${content4}</a>
+    `;
+
+}
+gethref(Nav1,Nav2,Nav3,Nav4);
+
