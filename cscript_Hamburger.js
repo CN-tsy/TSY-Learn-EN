@@ -1,3 +1,4 @@
+console.log('Learn-en/cscript_Hamburger.js v=0.1');
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector(".hamburger input");
     const menu = document.querySelector(".menu");
