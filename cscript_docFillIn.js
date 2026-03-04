@@ -1,3 +1,4 @@
+console.log('Learn-en/cscript_docFillIn.js v=0.1');
 const footer=document.querySelector('footer');
 const nav=document.querySelector('.nav');
 const menu=document.querySelector('.menu');
@@ -22,4 +23,5 @@ function gethref(Nav1,Nav2,Nav3,Nav4){
 
 }
 gethref(Nav1,Nav2,Nav3,Nav4);
+
 
