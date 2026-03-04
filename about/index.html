@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About|Learn EN</title>
     <link href="../cstyle.css" rel="stylesheet">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
     <header class="flex">
@@ -22,14 +23,17 @@
     </header>
     <h2 class="pageTitle flex">About</h2>
     <main>
-        <p>email us at tsyincq@qq.com</p>
+        <form>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAACl-8md3DM_LOzG0"></div>
+            <button onclick="location.href='mailto:tsyincq@qq.com';">Email us</button>
+        </form>
     </main>
     <footer class="flex"></footer>
     <script>
         const here=3;
         const Nav1='../index.html';
         const Nav2='';
-        const Nav3='#';
+        const Nav3='';
         const Nav4='https://www.bbc.co.uk/learningenglish/chinese/home';
     </script>
     <script src="../cscript_docFillIn.js"></script>
