@@ -49,25 +49,18 @@
     <script>
         const btn = document.querySelector('form button');
         function onVerify(token) {
-        // 解锁按钮
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        btn.style.cursor = 'pointer';
-        console.log("验证成功，获取到的token:", token);
-    }
+            // 解锁按钮
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.style.cursor = 'pointer';
+            console.log("验证成功，获取到的token:", token);
+        }
 
-    function onExpire() {
-        // 重新锁定按钮
-        btn.disabled = true;
-        btn.style.opacity = '0.5';
-        btn.style.cursor = 'not-allowed';
-        console.log("验证已过期，请重新验证");
-    }
-
-    window.turnstile && window.turnstile.render('.cf-turnstile', {
-        'callback': onVerify,
-        'expired-callback': onExpire
-    });
+        // 4. 绑定Turnstile回调（确保脚本在Turnstile加载完成后执行）
+        window.turnstile && window.turnstile.render('.cf-turnstile', {
+            'callback': onVerify,
+            'expired-callback': onExpire
+        });
     </script>
 </body>
 </html>
