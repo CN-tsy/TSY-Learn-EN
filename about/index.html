@@ -58,8 +58,7 @@
 
         // 4. 绑定Turnstile回调（确保脚本在Turnstile加载完成后执行）
         window.turnstile && window.turnstile.render('.cf-turnstile', {
-            'callback': onVerify,
-            'expired-callback': onExpire
+            'callback': onVerify
         });
     </script>
 </body>
