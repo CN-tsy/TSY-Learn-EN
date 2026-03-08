@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About|Learn EN</title>
     <link href="../cstyle.css" rel="stylesheet">
+    <link href="../cstyle_hamburger.css" rel="stylesheet">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
@@ -56,11 +57,6 @@
             btn.style.cursor = 'pointer';
             console.log("验证成功，获取到的token:", token);
         }
-
-        // 4. 绑定Turnstile回调（确保脚本在Turnstile加载完成后执行）
-        window.turnstile && window.turnstile.render('.cf-turnstile', {
-            'callback': onVerify
-        });
     </script>
 </body>
 </html>
