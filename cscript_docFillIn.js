@@ -20,9 +20,8 @@ function fixhref(h,l){
 }
 function deving(href,l){
     if(href===''){
-        href=fixhref('developing.html',l);
+        href='developing.html';
         console.log(`deving:${href}`);
-        
     }
     return href;
 }
