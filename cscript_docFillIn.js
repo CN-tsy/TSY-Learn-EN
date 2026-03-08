@@ -1,11 +1,31 @@
-console.log('Learn-en/cscript_docFillIn.js v=0.2');
+console.log('Learn-en/cscript_docFillIn.js v=1.0-Beta');
 const footer=document.querySelector('footer');
 const nav=document.querySelector('.nav');
 const menu=document.querySelector('.menu');
+let Nav1='index.html';
+let Nav2='';
+let Nav3='about/index.html';
+const Nav4='https://www.bbc.co.uk/learningenglish/chinese/home';
 
 footer.innerHTML=`<p>本网站由<a href='https://dash.cloudflare.com/' target='_blank'>cloudflare</a>部署</p>
 <p>Developed by TSY 2026</p>`;
-
+function fixhref(h,l){
+    let R='';
+    for(let i=0;i<l;i++){
+        R+='../';
+    }
+    R+=h;
+    console.log('fixhref:'+R);
+    return R;
+}
+function deving(href,l){
+    if(href===''){
+        href=fixhref('developing.html',l);
+        console.log(`deving:${href}`);
+        
+    }
+    return href;
+}
 function gethref(Nav1,Nav2,Nav3,Nav4){
     const content1='首页',content2='提升',content3='关于',content4='Learn From BBC';
     nav.innerHTML=`
@@ -22,4 +42,11 @@ function gethref(Nav1,Nav2,Nav3,Nav4){
     `;
 
 }
+Nav1=deving(Nav1,l);
+Nav2=deving(Nav2,l);
+Nav3=deving(Nav3,l);
+Nav1=fixhref(Nav1,l);
+Nav2=fixhref(Nav2,l);
+Nav3=fixhref(Nav3,l);
 gethref(Nav1,Nav2,Nav3,Nav4);
+
