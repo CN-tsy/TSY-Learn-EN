@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考试指令系统</title>
+    <link href="https://tsy-learn-en.pages.dev/cstyle_hamburger.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <label class="hamburger">
+            <input type="checkbox">
+            <svg viewBox="0 0 32 32">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+            </svg>
+        </label>
+        <div class="menu">
+            <div class="toggle-container">
+                <div class="switch">
+                    <input type="checkbox" class="toggle">
+                    <p>在开始或结束考试时响铃</p><br>
+                </div>
+            </div>
+            <!-- From Uiverse.io by Satwinder04 --> 
+            <div class="input-container" id="examNameI">
+                <input placeholder="输入考试名称" class="input-field" type="text">
+                <label for="input-field" class="input-label">考试名称</label>
+                <span class="input-highlight"></span>
+            </div>
+            <div class="input-container" id="examSubI">
+                <input placeholder="输入考试科目" class="input-field" type="text">
+                <label for="input-field" class="input-label">考试科目</label>
+                <span class="input-highlight"></span>
+            </div>
+            <button id="basicInfoSubBtn">确定</button>
+            <div class="Ts_btn">
+                <div class="Tselector">
+                    <p>考试开始时间：</p>
+                    <input type="time" class="i1" value="08:00">
+                </div>
+                <div class="Tselector">
+                    <p>考试结束时间：</p>
+                    <input type="time" class="i2" value="08:00">
+                </div>
+            <button class="confirm">Confirm</button>
+            </div>
+            <pre class="TokyoNight">
+                <code class="language-javascript" id="ObjShower">
+const Exam={
+    name:"",
+    subject:"",
+    startTime:"",//(String)格式为"hh:mm"，24小时制
+    endTime:""//(String)格式为"hh:mm"，24小时制
+}
+                </code>
+            </pre>
+            <pre class="TokyoNight"><code class="language-css">
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(42, 112, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; 
+    margin: 0;
+    color: white;
+}
+.main {
+    color: white;
+}
+.T {
+    font-size: 50px;
+}
+            </code></pre>
+        </div>
+        <div class="overlay"></div>
+        <h2 class="sub"></h2>
+        <h1 class="name"></h1>
+        <div class="s-eT">
+            <h3 class="startT"></h3>
+            <h3 class="endT"></h3>
+        </div>
+        <h1 class="T"></h1>
+        
+        <h2 class="mode"></h2>
+    </div>
+    <footer>
+        developed by tsy 2026,deployment by <a href="https://www.cloudflare-cn.com/">Cloudflare</a>
+    </footer>
+    <script>
+        Prism.highlightAll();
+    </script>
+    <script src="https://tsy-learn-en.pages.dev/cscript_Hamburger.js"></script>
+    <script src="script.js">
+    </script>
+</body>
+</html>
